@@ -2,15 +2,12 @@ package com.test.demo.dao.impl;
 
 import com.test.demo.dao.TestDemoDao;
 import com.test.demo.domain.TestDemo;
-import javafx.scene.shape.Circle;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.TabExpander;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -59,7 +56,7 @@ public class TestDemoDaoImpl implements TestDemoDao {
     }
 
     @Override
-    public Boolean update(TestDemo entity) {
+    public boolean update(TestDemo entity) {
         entity.setDate(new Date().toString());
         entity.setMethod("save");
         mongoTemplate.save(entity, COLLECTION);

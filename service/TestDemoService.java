@@ -15,7 +15,7 @@ public interface TestDemoService {
 
     Boolean remove(String id);
 
-    Boolean update(TestDemo entity);
+    boolean update(TestDemo entity);
 
     TestDemo get(String id);
 

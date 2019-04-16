@@ -13,7 +13,7 @@ public interface TestDemoDao {
 
     Boolean remove(String id);
 
-    Boolean update(TestDemo entity);
+    boolean update(TestDemo entity);
 
     TestDemo get(String id);
 

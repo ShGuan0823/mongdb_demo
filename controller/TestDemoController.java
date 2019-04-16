@@ -22,6 +22,7 @@ public class TestDemoController {
     TestDemoService testDemoService;
 
     @PostMapping(value = "/save")
+    @ResponseBody
     public String save(@RequestBody TestDemo testDemo) {
         return testDemoService.save(testDemo);
     }
@@ -33,12 +34,14 @@ public class TestDemoController {
     }
 
     @PostMapping(value = "/update")
+    @ResponseBody
     public Boolean update(@RequestBody TestDemo testDemo) {
         return testDemoService.update(testDemo);
     }
 
     @PostMapping(value = "/delete/{id}")
-    public Boolean delete(@PathVariable(name = "id") String id) {
+    @ResponseBody
+    public boolean delete(@PathVariable(name = "id") String id) {
         return testDemoService.remove(id);
     }
 

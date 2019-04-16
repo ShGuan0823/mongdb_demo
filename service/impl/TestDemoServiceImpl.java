@@ -31,7 +31,7 @@ public class TestDemoServiceImpl implements TestDemoService {
     }
 
     @Override
-    public Boolean update(TestDemo entity) {
+    public boolean update(TestDemo entity) {
         return testDemoDao.update(entity);
     }
 
