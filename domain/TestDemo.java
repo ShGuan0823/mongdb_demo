@@ -1,14 +1,19 @@
 package com.test.demo.domain;
 
-import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 
 /**
  * @Author Ssssg
  * @Description 测试实体类
  * @Date 2019/4/16 9:42
  **/
+@Document(collection = "test")
 public class TestDemo {
 
+    @Id
     private String id;
 
     private String db;
